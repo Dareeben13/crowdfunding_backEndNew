@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+const { categoryById } = require("../controllers/category");
+
 const { userById } = require("../controllers/user");
 const { requireSignin, isAdmin, isAuth } = require("../controllers/auth");
 const {
@@ -14,7 +16,8 @@ const {
   listRelated,
   listProject,
   listBySearch,
-  readID
+  readID,
+  listRelatedByCategory
 } = require("../controllers/project");
 
 router.post("/project/create/:userId", requireSignin, isAuth, create);
@@ -26,7 +29,6 @@ router.get("/project/:projectId", read);
 
 router.get("/project/read/:projectId", readID);
 
-
 router.delete(
   "/project/:projectId/:userId",
   requireSignin,
@@ -34,12 +36,12 @@ router.delete(
   isAuth,
   remove
 );
-router.get('/project/image/:projectId', file);
-router.get('/project/user/:userId', listRelated);
+router.get("/project/image/:projectId", file);
+router.get("/project/user/:userId", listRelated);
 router.post("/project/by/search", listBySearch);
+router.get("/projects/related/:projectId", listRelatedByCategory);
 
-
-
+router.param("categoryId", categoryById);
 
 router.param("userId", userById);
 router.param("projectId", projectById);

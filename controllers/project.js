@@ -196,6 +196,26 @@ exports.listRelated = (req, res) => {
 };
 
 
+
+exports.listRelatedByCategory = (req, res) => {
+  let limit = req.query.limit ? parseInt(req.query.limit) : 3;
+  Project.find({_id: {$ne: req.project}, category: req.project.category  })
+  .select("-image")
+  .limit(limit)
+  .populate('category', '_id name')
+  .exec((err, products ) =>{
+     if (err) {
+         return res.status(400).json({
+             error: "Project not found"
+         });
+     };
+     res.json(products);
+  });
+
+};
+
+
+
 exports.readID = (req, res) => {
   Project.find({ _id: req.project._id  })
     .populate('category')
