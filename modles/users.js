@@ -45,6 +45,11 @@ const userSchema = new mongoose.Schema(
       type: Number,
       required: true
     },
+    verification: {
+      type: Number,
+      default: 1
+    },
+    
    
   },
   { timestamps: true }

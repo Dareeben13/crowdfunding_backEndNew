@@ -17,6 +17,8 @@ const categoryRoutes = require("./routes/category");
 const galleryRoutes = require("./routes/gallery");
 const individualInvestorApplicationFormRoutes = require("./routes/individualInvestorApplicationForm");
 const corporateInvestorApplicationFormRoutes = require("./routes/corporateInvestorApplicationForm");
+const emailRoutes = require("./routes/email");
+const paymentRoutes = require("./routes/payment");
 
 
 
@@ -50,6 +52,9 @@ app.use("/api", categoryRoutes);
 app.use("/api", galleryRoutes);
 app.use("/api", individualInvestorApplicationFormRoutes);
 app.use("/api", corporateInvestorApplicationFormRoutes);
+app.use("/api", emailRoutes);
+app.use("/api", paymentRoutes);
+
 
 
 

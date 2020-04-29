@@ -43,7 +43,8 @@ exports.create = (req, res) => {
       returns,
       duration,
       image,
-      pdf
+      pdf,
+      projectType
     } = fields;
 
     if (
@@ -53,7 +54,8 @@ exports.create = (req, res) => {
       !location ||
       !website ||
       !returns ||
-      !duration
+      !duration ||
+      !projectType
     ) {
       return res.status(400).json({
         error: " All fields are required "

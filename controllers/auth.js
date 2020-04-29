@@ -3,13 +3,14 @@ const jwt = require("jsonwebtoken");
 const expressJwt = require("express-jwt");
 const { errorHandler } = require("../helpers/dbErrorHandler");
 
+
 exports.signup = (req, res) => {
   console.log("req.bod");
   const user = new User(req.body);
   user.save((err, user) => {
     if (err) {
       return res.status(400).json({
-        error: err
+        error: errorHandler(err)
       });
     }
     user.salt = undefined;
@@ -27,6 +28,12 @@ exports.signin = (req, res) => {
     if (err || !user) {
       return res.status(400).json({
         error: "User with that email does not exist. Please signup"
+      });
+    }
+
+    if (user.verification !=0) {
+      return res.status(401).json({
+        error: "Please verify your account to proceed"
       });
     }
     // if user is found make sure the email and password match

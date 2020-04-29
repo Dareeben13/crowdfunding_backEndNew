@@ -26,6 +26,11 @@ const projectSchema = new mongoose.Schema(
         trim: true,
         required: true,
       },
+      projectType: {
+        type: String,
+        trim: true,
+        required: true,
+      },
       website: {
         type: String,
         trim: true,

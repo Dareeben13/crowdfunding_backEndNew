@@ -20,6 +20,12 @@ exports.categoryById = (req, res, next,id) => {
 
 exports.create = (req, res) => {
    const category = new Category(req.body)
+
+   if (!category) {
+    return res.status(400).json({
+        error: 'category is required'
+    });
+}
    category.save((err, data) => {
 
     if (err) {

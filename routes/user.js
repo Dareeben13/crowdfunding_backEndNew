@@ -8,15 +8,18 @@ const {
   update2,
   userByIdGet,
   list,
-  remove
+  remove,
+  passwordReset
 } = require("../controllers/user");
 const { requireSignin, isAdmin, isAuth } = require("../controllers/auth");
 
 const { userSignupValidator } = require("../validator");
 
-router.get("/user/:userId", requireSignin, isAuth, read);
+router.get("/user/:userId",  read);
 router.put("/user/:userId", requireSignin, isAuth, update);
 router.put("/user/update/:userId", update);
+router.put("/user/passwordreset/:userId", passwordReset);
+
 
 router.get("/users/:userId", requireSignin, isAuth, list);
 router.delete("/user/:userIdD/:userId", requireSignin, isAuth, isAdmin, remove);
