@@ -19,7 +19,6 @@ const individualInvestorApplicationFormRoutes = require("./routes/individualInve
 const corporateInvestorApplicationFormRoutes = require("./routes/corporateInvestorApplicationForm");
 const emailRoutes = require("./routes/email");
 const paymentRoutes = require("./routes/payment");
-const braintreeRoutes = require("./routes/braintree");
 
 
 
@@ -56,7 +55,6 @@ app.use("/api", individualInvestorApplicationFormRoutes);
 app.use("/api", corporateInvestorApplicationFormRoutes);
 app.use("/api", emailRoutes);
 app.use("/api", paymentRoutes);
-app.use("/api", braintreeRoutes);
 
 
 
