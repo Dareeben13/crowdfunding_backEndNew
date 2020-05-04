@@ -56,7 +56,7 @@ exports.signin = (req, res) => {
       email,
       role,
       userType,
-      telephone
+      telephone,
     } = user;
     return res.json({
       token,
@@ -67,7 +67,8 @@ exports.signin = (req, res) => {
         email,
         role,
         userType,
-        telephone
+        telephone,
+    
       }
     });
   });
