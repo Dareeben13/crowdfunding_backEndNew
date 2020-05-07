@@ -102,7 +102,10 @@ const individualInvestorApplicationSchema = new mongoose.Schema(
         type: String,
         trim: true,
       },
-
+      status: {
+        type: Number,
+        default: 0
+      },
  
 
 

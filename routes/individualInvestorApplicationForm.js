@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 
 
-const { create, individualInvestorById, update, read, list, listRelated } = require("../controllers/individualInvestorApplicationForm");
+const { create, individualInvestorById, update, read, list, listRelated, updateStatus, declineStatus } = require("../controllers/individualInvestorApplicationForm");
 
 const { requireSignin, isAuth, isAdmin } = require("../controllers/auth");
 
@@ -16,6 +16,9 @@ router.post("/individual/investor/application/create/:userId", requireSignin, is
  router.put("/individual/investor/application/update/:individualInvestorId/:userId", requireSignin, isAuth, update);
  router.get("/individual/investor/application", list);
  router.get("/individual/investor/related/:userId", listRelated);
+
+ router.put("/individual/status/update/:individualInvestorId/:userId", requireSignin, isAuth, isAdmin, updateStatus);
+router.put("/individual/status/decline/:individualInvestorId/:userId", requireSignin, isAuth, isAdmin, declineStatus);
 
 
 router.param("individualInvestorId", individualInvestorById);

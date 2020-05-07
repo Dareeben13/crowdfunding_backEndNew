@@ -12,7 +12,7 @@ const { userById } = require("../controllers/user");
 router.post("/payment/create/:userId", requireSignin, isAuth, create);
 
 router.get("/payment/user/:userId", requireSignin, isAuth, listRelated);
-router.get("/payment/project/:projectId/:userId", requireSignin, isAuth, listRelatedByProduct);
+router.get("/payment/project/:projectId",  listRelatedByProduct);
 router.put("/payment/:paymentId/:userId", requireSignin, isAuth, update);
 
 

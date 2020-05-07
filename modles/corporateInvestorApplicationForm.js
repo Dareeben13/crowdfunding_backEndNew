@@ -94,7 +94,10 @@ const corporateInvestorApplicationSchema = new mongoose.Schema(
       },
 
  
-
+      status: {
+        type: Number,
+        default: 0
+      },
 
 
 

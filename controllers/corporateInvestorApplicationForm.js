@@ -146,3 +146,48 @@ exports.create = (req, res) => {
   
   };
   
+
+
+  exports.updateStatus = (req, res) => {
+    CorporateInvestorApplicationForm.findOne({
+        _id: req.corporateInvestor._id
+    }
+  
+    , (err, corporateInvestor) => {
+        if (err || !corporateInvestor) {
+            return res.status(400).json({error: 'Payment not found'});
+        }
+        corporateInvestor.status = 1;
+        corporateInvestor.save((err, corporateInvestor) => {
+            if (err) {
+                console.log('PAYMENT UPDATE ERROR', err);
+                return res.status(400).json({error: 'Payment update failed'});
+            }
+           
+            res.json(corporateInvestor);
+        });
+    });
+};
+
+
+exports.declineStatus = (req, res) => {
+  CorporateInvestorApplicationForm.findOne({
+      _id: req.corporateInvestor._id
+  }
+
+  , (err, corporateInvestor) => {
+      if (err || !corporateInvestor) {
+          return res.status(400).json({error: 'Payment not found'});
+      }
+      corporateInvestor.status = 2;
+      corporateInvestor.save((err, corporateInvestor) => {
+          if (err) {
+              console.log('PAYMENT UPDATE ERROR', err);
+              return res.status(400).json({error: 'Payment update failed'});
+          }
+         
+          res.json(corporateInvestor);
+      });
+  });
+};
+  

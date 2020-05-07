@@ -146,5 +146,48 @@ exports.create = (req, res) => {
     });
   
   };
+
+  exports.updateStatus = (req, res) => {
+    IndividualInvestorAppclicationForm.findOne({
+        _id: req.individualInvestor._id
+    }
+  
+    , (err, individualInvestor) => {
+        if (err || !individualInvestor) {
+            return res.status(400).json({error: 'Payment not found'});
+        }
+        individualInvestor.status = 1;
+        individualInvestor.save((err, individualInvestor) => {
+            if (err) {
+                console.log('PAYMENT UPDATE ERROR', err);
+                return res.status(400).json({error: 'Payment update failed'});
+            }
+           
+            res.json(individualInvestor);
+        });
+    });
+};
+
+
+exports.declineStatus = (req, res) => {
+  IndividualInvestorAppclicationForm.findOne({
+      _id: req.individualInvestor._id
+  }
+
+  , (err, individualInvestor) => {
+      if (err || !individualInvestor) {
+          return res.status(400).json({error: 'Payment not found'});
+      }
+      individualInvestor.status = 2;
+      individualInvestor.save((err, individualInvestor) => {
+          if (err) {
+              console.log('PAYMENT UPDATE ERROR', err);
+              return res.status(400).json({error: 'Payment update failed'});
+          }
+         
+          res.json(individualInvestor);
+      });
+  });
+};
   
   

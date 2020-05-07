@@ -4,9 +4,9 @@ const express = require("express");
 const router = express.Router();
 
 
-const { create, corporateInvestorById, update, read, list, listRelated } = require("../controllers/corporateInvestorApplicationForm");
+const { create, corporateInvestorById, update, read, list, listRelated, updateStatus, declineStatus } = require("../controllers/corporateInvestorApplicationForm");
 
-const { requireSignin, isAuth } = require("../controllers/auth");
+const { requireSignin, isAuth, isAdmin } = require("../controllers/auth");
 
 
 const {  userById } = require("../controllers/user");
@@ -17,6 +17,8 @@ router.post("/corporate/investor/application/create/:userId", requireSignin, isA
  router.get("/corporate/investor/application", list);
  router.get("/corporate/investor/related/:userId", listRelated);
 
+ router.put("/corporate/status/update/:corporateInvestorId/:userId", requireSignin, isAuth, isAdmin, updateStatus);
+router.put("/corporate/status/decline/:corporateInvestorId/:userId", requireSignin, isAuth, isAdmin, declineStatus);
 
 router.param("corporateInvestorId", corporateInvestorById);
 router.param("userId", userById);
