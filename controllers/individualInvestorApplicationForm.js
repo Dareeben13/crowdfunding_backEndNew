@@ -69,7 +69,6 @@ exports.create = (req, res) => {
         !identification ||
         !maidenname ||
         !occupation ||
-        !industry ||
         !estimatedAnnualIncome ||
         !originOfFunds ||
         !maximumAmountForInvestment ||

@@ -40,21 +40,21 @@ exports.mail = (req, res) => {
                                   
                                   <tr>
                                       <td style="padding:40px 32px 0 32px">
-                                          <p>Hi ${lastname},</p>
+                                          <p>Hello ${lastname},</p>
       
-      <p>thank you for registering at NASDOTC - the crowdinvesting platform.      </p>
+      <p>thank you for registering at NASDOTC - The Crowdinvesting Clatform.      </p>
       
       <div style="border-radius:4px;border:none!important;background-color:#f3f3f4;padding:24px!important;margin:0 0 24px 0!important">
-          <p><em style="white-space:pre-line">To complete your registration, please click on the following link:
-          <a href="https://account.nasdfundy.com/verification/${userID}" target="_blank" data-saferedirecturl="https://account.nasdfundy.com/verification/${userID}">go to the application</a></em></p>
+          <p><em style="white-space:pre-line">To complete your registration, please click on the following link below:
+          <a href="https://account.nasdfundy.com/verification/${userID}" target="_blank" data-saferedirecturl="https://account.nasdfundy.com/verification/${userID}">go to your application</a></em></p>
       </div>
     
-      <p>  Please do not respond to this email with any questions, instead please contact us direct at marketoperations@nasdng.com</p>
+      <p>   Do not respond to this email, please contact us directly at marketoperations@nasdng.com</p>
       
      
       
       <p>Best regards,<br>
-      NASD</p>
+      NASD Plc</p>
                                       </td>
                                   </tr>
                                   
@@ -70,7 +70,7 @@ exports.mail = (req, res) => {
                                                                       <tr>
                                                                           <td>
                                                                               <p style="margin:0 8px 0 8px;padding:0;font-size:14px;line-height:1.4">
-                                                                                  Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="#" target="_blank" data-saferedirecturl="#">Risk Disclosure Statement.</a>
+                                                                              Investing in early-stage companies puts your capital at risk. Please read our  <a style="color:#072360;font-weight:500" href="https://nasdfundy.com/risk/warning" target="_blank" data-saferedirecturl="https://nasdfundy.com/risk/warning">Risk Warning Statement.</a>
                                                                               </p>
                                                                           </td>
                                                                       </tr>
@@ -156,11 +156,11 @@ exports.mail = (req, res) => {
                               <tr>
                                   <td style="border-top:1px solid #cdced2">
                                       <p style="font-size:12px;color:#6c6f7a;margin-top:40px">
-                                          This email is sent to you by NASD OTC Markets in connection with a specific activity you have performed through the platform or otherwise related to the services provided to you. Please note that the information appearing in this email may contain financial promotion approved either by NASD OTC  (authorised and regulated by the SEC Conduct Authority under FRN 794918) or by NASD OTC  (licensed and regulated by the Monetary Authority of Singapore under Capital Markets Services (CMS) license CMS100863).
-                                          <br>
-                                          Information regarding trading activities is received from the recognised operator of the Marketplace, Funderbeam Markets Pte Ltd in Singapore.
-                                          <br>
-                                          Please also note that the purpose of this email is to keep you informed and not to provide you any type of advice.
+                                      This email is sent to you by NASD Plc in connection with your registration on NASD CrowdFunding Portal or otherwise related services. </p>
+                                       
+                                      <p style="font-size:12px;color:#6c6f7a;margin-top:40px">  Please note that the information appearing in this email may contain financial promotions approved either by NASD Plc (authorised and regulated by the Securities and Exchange Commission).</p>
+                                       
+                                      <p style="font-size:12px;color:#6c6f7a;margin-top:40px">     Kindly be advised that the purpose of this email is to keep you informed only and not be taken as an advice.
                                       </p>
                                   </td>
                               </tr>
@@ -846,7 +846,9 @@ exports.applicationAccept = (req, res) => {
                                             <p style="display:none!important;opacity:0;color:transparent;height:0;width:0">We'll review it within 1 business day and will get back to you.</p>
         
         <p>Hi ${lastname},</p>
-        <p>Your application for ${firstname} ${lastname}, has been approved. You can now begin with setting up your portal .</p>
+        <p>Your account  for ${firstname} ${lastname} has been verified!
+        <br/>
+        You can now continue with your registration on the NASD Crowdfunding Portal.</p>
         
         
         

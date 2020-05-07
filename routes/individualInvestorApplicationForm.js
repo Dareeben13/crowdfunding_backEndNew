@@ -14,7 +14,7 @@ const {  userById } = require("../controllers/user");
 router.get("/individual/investor/application/:individualInvestorId", read);
 router.post("/individual/investor/application/create/:userId", requireSignin, isAuth ,create);
  router.put("/individual/investor/application/update/:individualInvestorId/:userId", requireSignin, isAuth, update);
- router.get("/individual/investor/application", list);
+ router.get("/individual/investor/:userId", requireSignin, isAuth, isAdmin,  list);
  router.get("/individual/investor/related/:userId", listRelated);
 
  router.put("/individual/status/update/:individualInvestorId/:userId", requireSignin, isAuth, isAdmin, updateStatus);
