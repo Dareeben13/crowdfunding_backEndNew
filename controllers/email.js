@@ -46,7 +46,7 @@ exports.mail = (req, res) => {
       
       <div style="border-radius:4px;border:none!important;background-color:#f3f3f4;padding:24px!important;margin:0 0 24px 0!important">
           <p><em style="white-space:pre-line">To complete your registration, please click on the following link:
-          <a href="http://localhost:3001/verification/${userID}" target="_blank" data-saferedirecturl="http://localhost:3001/verification/${userID}">go to the application</a></em></p>
+          <a href="https://account.nasdfundy.com//verification/${userID}" target="_blank" data-saferedirecturl="https://account.nasdfundy.com//verification/${userID}">go to the application</a></em></p>
       </div>
     
       <p>  Please do not respond to this email with any questions, instead please contact us direct at marketoperations@nasdng.com</p>
@@ -222,7 +222,7 @@ exports.passwordReset = (req, res) => {
         
         <div style="border-radius:4px;border:none!important;background-color:#f3f3f4;padding:24px!important;margin:0 0 24px 0!important">
             <p><em style="white-space:pre-line">To reset your password, please click on the following link:
-            <a href="http://localhost:3001/password/reset/${userID}" target="_blank" data-saferedirecturl="http://localhost:3001/password/reset/${userID}">go to password reset</a></em></p>
+            <a href="https://account.nasdfundy.com//password/reset/${userID}" target="_blank" data-saferedirecturl="https://account.nasdfundy.com//password/reset/${userID}">go to password reset</a></em></p>
         </div>
       
         <p>  If you did not ask to reset your password, please ignore this email and nothing will change.</p>
@@ -528,7 +528,7 @@ exports.payment = (req, res) => {
                                                                                                 <tr style="vertical-align:top">
                                                                                                     <td style="word-break:break-word;border-collapse:collapse!important;vertical-align:top;padding-top:20px;padding-right:10px;padding-bottom:20px;padding-left:10px;text-align:center">
                                                                                                         <div style="margin-top:20px;margin-bottom:10px;padding:0px;border:none;outline:none;list-style:none;display:inline;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif">
-                                                                                                            <a href="http://localhost:3001/invoice/${refId}" style="font-size:14px;line-height:21px;text-align:center;color:#50a1f7" target="_blank" data-saferedirecturl="http://localhost:3001/invoice/${refId}">View on dashboard</a>
+                                                                                                            <a href="https://account.nasdfundy.com//invoice/${refId}" style="font-size:14px;line-height:21px;text-align:center;color:#50a1f7" target="_blank" data-saferedirecturl="https://account.nasdfundy.com//invoice/${refId}">View on dashboard</a>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>
