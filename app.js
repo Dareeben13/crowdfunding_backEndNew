@@ -21,6 +21,7 @@ const emailRoutes = require("./routes/email");
 const paymentRoutes = require("./routes/payment");
 const documentRoutes = require("./routes/document");
 const issuerApplicationForm = require("./routes/issuerApplicationForm");
+const blogRoutes = require("./routes/blog");
 
 
 
@@ -60,6 +61,7 @@ app.use("/api", emailRoutes);
 app.use("/api", paymentRoutes);
 app.use("/api", documentRoutes);
 app.use("/api", issuerApplicationForm);
+app.use("/api", blogRoutes);
 
 
 
