@@ -22,6 +22,7 @@ const paymentRoutes = require("./routes/payment");
 const documentRoutes = require("./routes/document");
 const issuerApplicationForm = require("./routes/issuerApplicationForm");
 const blogRoutes = require("./routes/blog");
+const contactForm = require("./routes/contactForm");
 
 
 
@@ -62,6 +63,7 @@ app.use("/api", paymentRoutes);
 app.use("/api", documentRoutes);
 app.use("/api", issuerApplicationForm);
 app.use("/api", blogRoutes);
+app.use("/api", contactForm);
 
 
 

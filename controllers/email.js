@@ -42,11 +42,11 @@ exports.mail = (req, res) => {
                                       <td style="padding:40px 32px 0 32px">
                                           <p>Hello ${lastname},</p>
       
-      <p>thank you for registering at NASDOTC - The Crowdinvesting Clatform.      </p>
+      <p>Thank you for registering with Ventureramp - The Crowd Funding & Investing Portal of the NASD OTC Securities Exchange.     </p>
       
       <div style="border-radius:4px;border:none!important;background-color:#f3f3f4;padding:24px!important;margin:0 0 24px 0!important">
           <p><em style="white-space:pre-line">To complete your registration, please click on the following link below:
-          <a href="https://account.nasdfundy.com/verification/${userID}" target="_blank" data-saferedirecturl="https://account.nasdfundy.com/verification/${userID}">go to your application</a></em></p>
+          <a href="${process.env.EMAIL}/verification/${userID}" target="_blank" data-saferedirecturl="${process.env.EMAIL}/verification/${userID}">go to your application</a></em></p>
       </div>
     
       <p>   Do not respond to this email, please contact us directly at marketoperations@nasdng.com</p>
@@ -222,7 +222,7 @@ exports.passwordReset = (req, res) => {
         
         <div style="border-radius:4px;border:none!important;background-color:#f3f3f4;padding:24px!important;margin:0 0 24px 0!important">
             <p><em style="white-space:pre-line">To reset your password, please click on the following link:
-            <a href="https://account.nasdfundy.com/password/reset/${userID}" target="_blank" data-saferedirecturl="https://account.nasdfundy.com/password/reset/${userID}">go to password reset</a></em></p>
+            <a href="${process.env.EMAIL}/password/reset/${userID}" target="_blank" data-saferedirecturl="${process.env.EMAIL}/password/reset/${userID}">go to password reset</a></em></p>
         </div>
       
         <p>  If you did not ask to reset your password, please ignore this email and nothing will change.</p>
@@ -333,11 +333,7 @@ exports.passwordReset = (req, res) => {
                                 <tr>
                                     <td style="border-top:1px solid #cdced2">
                                         <p style="font-size:12px;color:#6c6f7a;margin-top:40px">
-                                            This email is sent to you by NASD OTC Markets in connection with a specific activity you have performed through the platform or otherwise related to the services provided to you. Please note that the information appearing in this email may contain financial promotion approved either by NASD OTC  (authorised and regulated by the SEC Conduct Authority under FRN 794918) or by NASD OTC  (licensed and regulated by the Monetary Authority of Singapore under Capital Markets Services (CMS) license CMS100863).
-                                            <br>
-                                            Information regarding trading activities is received from the recognised operator of the Marketplace, Funderbeam Markets Pte Ltd in Singapore.
-                                            <br>
-                                            Please also note that the purpose of this email is to keep you informed and not to provide you any type of advice.
+                                        You are receiving this email from NASD Plc because you have registered on  NASDFundy -<br/> the Crowd Funding & Investing Portal of the NASD OTC Securities Exchange or otherwise related services.
                                         </p>
                                     </td>
                                 </tr>
@@ -528,7 +524,7 @@ exports.payment = (req, res) => {
                                                                                                 <tr style="vertical-align:top">
                                                                                                     <td style="word-break:break-word;border-collapse:collapse!important;vertical-align:top;padding-top:20px;padding-right:10px;padding-bottom:20px;padding-left:10px;text-align:center">
                                                                                                         <div style="margin-top:20px;margin-bottom:10px;padding:0px;border:none;outline:none;list-style:none;display:inline;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif">
-                                                                                                            <a href="https://account.nasdfundy.com/invoice/${refId}" style="font-size:14px;line-height:21px;text-align:center;color:#50a1f7" target="_blank" data-saferedirecturl="https://account.nasdfundy.com//invoice/${refId}">View on dashboard</a>
+                                                                                                            <a href="${process.env.EMAIL}/invoice/${refId}" style="font-size:14px;line-height:21px;text-align:center;color:#50a1f7" target="_blank" data-saferedirecturl="${process.env.EMAIL}//invoice/${refId}">View on dashboard</a>
                                                                                                         </div>
                                                                                                     </td>
                                                                                                 </tr>

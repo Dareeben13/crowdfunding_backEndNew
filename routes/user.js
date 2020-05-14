@@ -9,7 +9,9 @@ const {
   userByIdGet,
   list,
   remove,
-  passwordReset
+  passwordReset,
+  frontendlist,
+  investorList
 } = require("../controllers/user");
 const { requireSignin, isAdmin, isAuth } = require("../controllers/auth");
 
@@ -22,6 +24,10 @@ router.put("/user/passwordreset/:userId", passwordReset);
 
 
 router.get("/users/:userId", requireSignin, isAuth, list);
+
+router.get("/users/frontend/list", frontendlist);
+router.get("/users/investor/list", investorList);
+
 router.delete("/user/:userIdD/:userId", requireSignin, isAuth, isAdmin, remove);
 
 router.param("userId", userById);

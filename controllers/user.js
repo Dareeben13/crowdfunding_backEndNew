@@ -217,6 +217,64 @@ exports.list = (req, res) => {
     });
 };
 
+
+exports.frontendlist = (req, res) => {
+  let order = req.query.order ? req.query.order : "asc";
+  let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
+  let limit = req.query.limit ? parseInt(req.query.limit) : 100;
+
+  User.find()
+    .select("-hashed_password")
+    .select("-salt")
+    .select("-role")
+    .select("-userType")
+    .select("-firstname")
+    .select("-lastname")
+    .select("-email")
+    .select("-telephone")
+    .select("-createdAt")
+    .select("-updatedAt")
+
+
+
+    .sort([[sortBy, order]])
+    .exec((err, users) => {
+      if (err) {
+        return res.status(400).json({ error: "Users not found" });
+      }
+      res.json(users);
+    });
+};
+
+
+
+exports.investorList = (req, res) => {
+  let order = req.query.order ? req.query.order : "asc";
+  let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
+  let limit = req.query.limit ? parseInt(req.query.limit) : 100;
+
+  User.find( { userType: 1 } )
+    .select("-hashed_password")
+    .select("-salt")
+    .select("-role")
+    .select("-firstname")
+    .select("-lastname")
+    .select("-email")
+    .select("-telephone")
+    .select("-createdAt")
+    .select("-updatedAt")
+
+
+
+    .sort([[sortBy, order]])
+    .exec((err, users) => {
+      if (err) {
+        return res.status(400).json({ error: "Users not found" });
+      }
+      res.json(users);
+    });
+};
+
 exports.remove = (req, res) => {
   const user = req.user;
   user.remove((err, data) => {

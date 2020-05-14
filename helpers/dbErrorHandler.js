@@ -11,7 +11,7 @@ const uniqueMessage = error => {
             error.message.lastIndexOf("_1")
         );
         output =
-            fieldName.charAt(0).toUpperCase() +
+             fieldName.charAt(0).toUpperCase() +
             fieldName.slice(1) +
             " already exists";
     } catch (ex) {
