@@ -34,7 +34,7 @@ exports.mail = (req, res) => {
                                   
                                   <tr>
                                       <td style="background-color:#072360;padding:24px 30px 24px 30px;border-top-left-radius:4px;border-top-right-radius:4px">
-                                          <img src="https://nasdng.com/wp-content/uploads/2019/06/nasdlogo.jpg" alt="" title="" width="146" height="38" class="CToWUd">
+                                          <img src="https://nasdng.com/wp-content/uploads/2020/06/logo.jpg" alt="" title="" width="146" height="38" class="CToWUd">
                                       </td>
                                   </tr>
                                   
@@ -70,7 +70,7 @@ exports.mail = (req, res) => {
                                                                       <tr>
                                                                           <td>
                                                                               <p style="margin:0 8px 0 8px;padding:0;font-size:14px;line-height:1.4">
-                                                                              Investing in early-stage companies puts your capital at risk. Please read our  <a style="color:#072360;font-weight:500" href="https://nasdfundy.com/risk/warning" target="_blank" data-saferedirecturl="https://nasdfundy.com/risk/warning">Risk Warning Statement.</a>
+                                                                              Investing in early-stage companies puts your capital at risk. Please read our  <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/risk/warning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/risk/warning">Risk Warning Statement.</a>
                                                                               </p>
                                                                           </td>
                                                                       </tr>
@@ -210,7 +210,7 @@ exports.passwordReset = (req, res) => {
                                     
                                     <tr>
                                         <td style="background-color:#072360;padding:24px 30px 24px 30px;border-top-left-radius:4px;border-top-right-radius:4px">
-                                            <img src="https://nasdng.com/wp-content/uploads/2019/06/nasdlogo.jpg" alt="" title="" width="146" height="38" class="CToWUd">
+                                            <img src="https://nasdng.com/wp-content/uploads/2020/06/logo.jpg" alt="" title="" width="146" height="38" class="CToWUd">
                                         </td>
                                     </tr>
                                     
@@ -247,7 +247,7 @@ exports.passwordReset = (req, res) => {
                                                                         <tr>
                                                                             <td>
                                                                                 <p style="margin:0 8px 0 8px;padding:0;font-size:14px;line-height:1.4">
-                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="#" target="_blank" data-saferedirecturl="#">Risk Disclosure Statement.</a>
+                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/risk/warning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/risk/warning">Risk Disclosure Statement.</a>
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
@@ -659,7 +659,7 @@ exports.applicationVerificationProcessingMail = (req, res) => {
                                     
                                     <tr>
                                         <td style="background-color:#072360;padding:24px 30px 24px 30px;border-top-left-radius:4px;border-top-right-radius:4px">
-                                        <img src="https://nasdng.com/wp-content/uploads/2019/06/nasdlogo.jpg" alt="" title="" width="146" height="38" class="CToWUd">
+                                        <img src="https://nasdng.com/wp-content/uploads/2020/06/logo.jpg" alt="" title="" width="146" height="38" class="CToWUd">
                                         </td>
                                     </tr>
                                     
@@ -668,10 +668,10 @@ exports.applicationVerificationProcessingMail = (req, res) => {
                                             <p style="display:none!important;opacity:0;color:transparent;height:0;width:0">We'll review it within 1 business day and will get back to you.</p>
         
         <p>Hi ${lastname},</p>
-        <p>We are reviewing your verification for ${firstname} ${lastname}, and will get back to you within 1 business day with our approval or a request for more information.</p>
+        <p>We are reviewing your application and supporting documents for  r ${firstname} ${lastname}, and will get back to you within One (1) business day with with our approval or a request for more information.</p>
         
-        <p>While you wait, why not have a look at our how-to guides <a href="#" target="_blank" data-saferedirecturl="#">for investors</a>
-            and for <a href="#" target="_blank" data-saferedirecturl="#">raising funds</a>.</p>
+        <p>While you wait, why not look at our how to guidelines for raising funds, supporting obligations,  <a href="https://ventureramp.com.ng/data/protection" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/data/protection">FAQ’s, Rules</a>
+            and for <a href="https://nasdng.com/" target="_blank" data-saferedirecturl="https://nasdng.com/">OTC </a>Securities Exchange. </p>
         
         <p>Regards,<br>
         <span class="il">NASD</span></p>
@@ -690,7 +690,7 @@ exports.applicationVerificationProcessingMail = (req, res) => {
                                                                         <tr>
                                                                             <td>
                                                                                 <p style="margin:0 8px 0 8px;padding:0;font-size:14px;line-height:1.4">
-                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="#" target="_blank" data-saferedirecturl="#">Risk Disclosure Statement.</a>
+                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/risk/warning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/risk/warning">Risk Disclosure Statement.</a>
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
@@ -722,7 +722,7 @@ exports.applicationVerificationProcessingMail = (req, res) => {
                                             <tr>
                                                 <td style="width:100%">
                                                     <a href="http://nasdng.com/" target="_blank" data-saferedirecturl="http://nasdng.com/">
-                                                        <img width="134px" height="35px" src="https://nasdng.com/wp-content/uploads/2019/06/nasdlogo.jpg"" alt="NASD logo" class="CToWUd">
+                                                        <img width="134px" height="35px" src="https://nasdng.com/wp-content/uploads/2020/06/logo.jpg"" alt="NASD logo" class="CToWUd">
                                                     </a>
                                                 </td>
                                                 <td style="vertical-align:bottom">
@@ -833,7 +833,7 @@ exports.applicationAccept = (req, res) => {
                                     
                                     <tr>
                                         <td style="background-color:#072360;padding:24px 30px 24px 30px;border-top-left-radius:4px;border-top-right-radius:4px">
-                                        <img src="https://nasdng.com/wp-content/uploads/2019/06/nasdlogo.jpg" alt="" title="" width="146" height="38" class="CToWUd">
+                                        <img src="https://nasdng.com/wp-content/uploads/2020/06/logo.jpg" alt="" title="" width="146" height="38" class="CToWUd">
                                         </td>
                                     </tr>
                                     
@@ -865,7 +865,7 @@ exports.applicationAccept = (req, res) => {
                                                                         <tr>
                                                                             <td>
                                                                                 <p style="margin:0 8px 0 8px;padding:0;font-size:14px;line-height:1.4">
-                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="#" target="_blank" data-saferedirecturl="#">Risk Disclosure Statement.</a>
+                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/risk/warning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/risk/warning">Risk Disclosure Statement.</a>
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
@@ -897,7 +897,7 @@ exports.applicationAccept = (req, res) => {
                                             <tr>
                                                 <td style="width:100%">
                                                     <a href="http://nasdng.com/" target="_blank" data-saferedirecturl="http://nasdng.com/">
-                                                        <img width="134px" height="35px" src="https://nasdng.com/wp-content/uploads/2019/06/nasdlogo.jpg"" alt="NASD logo" class="CToWUd">
+                                                        <img width="134px" height="35px" src="https://nasdng.com/wp-content/uploads/2020/06/logo.jpg"" alt="NASD logo" class="CToWUd">
                                                     </a>
                                                 </td>
                                                 <td style="vertical-align:bottom">
@@ -1010,7 +1010,7 @@ exports.applicationDecline = (req, res) => {
                                     
                                     <tr>
                                         <td style="background-color:#072360;padding:24px 30px 24px 30px;border-top-left-radius:4px;border-top-right-radius:4px">
-                                        <img src="https://nasdng.com/wp-content/uploads/2019/06/nasdlogo.jpg" alt="" title="" width="146" height="38" class="CToWUd">
+                                        <img src="https://nasdng.com/wp-content/uploads/2020/06/logo.jpg" alt="" title="" width="146" height="38" class="CToWUd">
                                         </td>
                                     </tr>
                                     
@@ -1046,7 +1046,7 @@ exports.applicationDecline = (req, res) => {
                                                                         <tr>
                                                                             <td>
                                                                                 <p style="margin:0 8px 0 8px;padding:0;font-size:14px;line-height:1.4">
-                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="#" target="_blank" data-saferedirecturl="#">Risk Disclosure Statement.</a>
+                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/risk/warning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/risk/warning">Risk Disclosure Statement.</a>
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
@@ -1078,7 +1078,7 @@ exports.applicationDecline = (req, res) => {
                                             <tr>
                                                 <td style="width:100%">
                                                     <a href="http://nasdng.com/" target="_blank" data-saferedirecturl="http://nasdng.com/">
-                                                        <img width="134px" height="35px" src="https://nasdng.com/wp-content/uploads/2019/06/nasdlogo.jpg"" alt="NASD logo" class="CToWUd">
+                                                        <img width="134px" height="35px" src="https://nasdng.com/wp-content/uploads/2020/06/logo.jpg"" alt="NASD logo" class="CToWUd">
                                                     </a>
                                                 </td>
                                                 <td style="vertical-align:bottom">
