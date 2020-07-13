@@ -70,7 +70,7 @@ exports.mail = (req, res) => {
                                                                       <tr>
                                                                           <td>
                                                                               <p style="margin:0 8px 0 8px;padding:0;font-size:14px;line-height:1.4">
-                                                                              Investing in early-stage companies puts your capital at risk. Please read our  <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/risk/warning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/risk/warning">Risk Warning Statement.</a>
+                                                                              Investing in early-stage companies puts your capital at risk. Please read our  <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/riskwarning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/riskwarning">Risk Warning Statement.</a>
                                                                               </p>
                                                                           </td>
                                                                       </tr>
@@ -247,7 +247,7 @@ exports.passwordReset = (req, res) => {
                                                                         <tr>
                                                                             <td>
                                                                                 <p style="margin:0 8px 0 8px;padding:0;font-size:14px;line-height:1.4">
-                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/risk/warning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/risk/warning">Risk Disclosure Statement.</a>
+                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/riskwarning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/riskwarning">Risk Disclosure Statement.</a>
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
@@ -333,7 +333,7 @@ exports.passwordReset = (req, res) => {
                                 <tr>
                                     <td style="border-top:1px solid #cdced2">
                                         <p style="font-size:12px;color:#6c6f7a;margin-top:40px">
-                                        You are receiving this email from NASD Plc because you have registered on  NASDFundy -<br/> the Crowd Funding & Investing Portal of the NASD OTC Securities Exchange or otherwise related services.
+                                        You are receiving this email from NASD Plc because you have registered on  VentureRamp -<br/> the Crowd Funding & Investing Portal of the NASD OTC Securities Exchange or otherwise related services.
                                         </p>
                                     </td>
                                 </tr>
@@ -403,9 +403,7 @@ exports.payment = (req, res) => {
                                                                                 <tr style="vertical-align:top">
                                                                                     <td style="word-break:break-word;border-collapse:collapse!important;vertical-align:top;background-color:transparent;padding-top:0;padding-right:0;padding-bottom:30px;padding-left:0;border-top:1px solid #ededed;border-right:1px solid #ededed;border-bottom:1px solid #ededed;border-left:1px solid #ededed">
                                                                                         
-                                                                                        <div style="font-size:14px;line-height:17px;text-align:center;color:white;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;padding-top:15px;padding-right:10px;padding-bottom:15px;padding-left:10px;background:#f05050">
-                                                                                            <p style="margin:0;font-size:14px;line-height:17px;text-align:center">This is a test payment. No real money was paid by you.</p>
-                                                                                        </div>
+                                                                                      
                                                                                         
                                                                                         <table style="border-spacing:0;border-collapse:collapse;vertical-align:top;background:url('https://ci3.googleusercontent.com/proxy/Hai9ZcQtT7UHCMMgI7MfB4kRzgHFeJ8dUJ7uGB5B_R2Bug734CwTYmCd_u8LM2Yp_jGmqXXqUN1BpI7Utcd_m1iLSi7vJF7wHclr494qiKXfw_q0=s0-d-e1-ft#https://s3-eu-west-1.amazonaws.com/pstk-public-files/confetti.png') repeat" cellpadding="0" cellspacing="0" width="100%">
                                                                                             <tbody>
@@ -668,12 +666,12 @@ exports.applicationVerificationProcessingMail = (req, res) => {
                                             <p style="display:none!important;opacity:0;color:transparent;height:0;width:0">We'll review it within 1 business day and will get back to you.</p>
         
         <p>Hi ${lastname},</p>
-        <p>We are reviewing your application and supporting documents for  r ${firstname} ${lastname}, and will get back to you within One (1) business day with with our approval or a request for more information.</p>
+        <p>We are reviewing the Verification for  ${firstname} ${lastname}, and will get back to you within 1 business day with either an Approval or Request for further information.</p>
         
-        <p>While you wait, why not look at our how to guidelines for raising funds, supporting obligations,  <a href="https://ventureramp.com.ng/data/protection" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/data/protection">FAQ’s, Rules</a>
+        <p>While you wait, kindly have a look at How to guide for Investors and Issuers  <a href="https://ventureramp.com.ng/data/protection" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/data/protection">FAQ’s, Rules</a>
             and for <a href="https://nasdng.com/" target="_blank" data-saferedirecturl="https://nasdng.com/">OTC </a>Securities Exchange. </p>
         
-        <p>Regards,<br>
+        <p>Thank you for your interest in VentureRamp.<br>
         <span class="il">NASD</span></p>
                                         </td>
                                     </tr>
@@ -690,7 +688,7 @@ exports.applicationVerificationProcessingMail = (req, res) => {
                                                                         <tr>
                                                                             <td>
                                                                                 <p style="margin:0 8px 0 8px;padding:0;font-size:14px;line-height:1.4">
-                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/risk/warning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/risk/warning">Risk Disclosure Statement.</a>
+                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/riskwarning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/riskwarning">Risk Disclosure Statement.</a>
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
@@ -865,7 +863,7 @@ exports.applicationAccept = (req, res) => {
                                                                         <tr>
                                                                             <td>
                                                                                 <p style="margin:0 8px 0 8px;padding:0;font-size:14px;line-height:1.4">
-                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/risk/warning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/risk/warning">Risk Disclosure Statement.</a>
+                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/riskwarning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/riskwarning">Risk Disclosure Statement.</a>
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
@@ -1046,7 +1044,7 @@ exports.applicationDecline = (req, res) => {
                                                                         <tr>
                                                                             <td>
                                                                                 <p style="margin:0 8px 0 8px;padding:0;font-size:14px;line-height:1.4">
-                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/risk/warning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/risk/warning">Risk Disclosure Statement.</a>
+                                                                                    Investing in early-stage and growth companies puts your capital at risk. Please read our <a style="color:#072360;font-weight:500" href="https://ventureramp.com.ng/riskwarning" target="_blank" data-saferedirecturl="https://ventureramp.com.ng/riskwarning">Risk Disclosure Statement.</a>
                                                                                 </p>
                                                                             </td>
                                                                         </tr>
