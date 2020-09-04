@@ -209,7 +209,7 @@ exports.declineStatus = (req, res) => {
       issuerApplication.status = 2;
       issuerApplication.save((err, issuerApplication) => {
           if (err) {
-              console.log('PAYMENT UPDATE ERROR', err);
+              console.log('PAYMENT UPDATE ERROR.', err);
               return res.status(400).json({error: 'Payment update failed'});
           }
          
