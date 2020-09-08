@@ -1,16 +1,25 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
-const { contactForm, list, read , contactById} = require("../controllers/contactForm");
-const { contactSignupValidator } = require("../validator/contact");
+const {
+  contactForm,
+  list,
+  read,
+  contactById,
+} = require('../controllers/contactForm');
+const { contactSignupValidator } = require('../validator/contact');
 
+router.post('/contact', contactSignupValidator, contactForm);
+router.get('/contact/list', list);
 
-router.post("/contact", contactSignupValidator, contactForm);
-router.get("/contact/list", list);
+router.get('/contact/:contactId', read);
 
-router.get("/contact/:contactId",  read);
+router.param('contactId', contactById);
 
-router.param("contactId", contactById);
-
+router.post('/subscription', async (req, res) => {
+  var event = req.body;
+  // Do something with event
+  res.status(200).send(event);
+});
 
 module.exports = router;
