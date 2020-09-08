@@ -16,7 +16,7 @@ router.get('/contact/:contactId', read);
 
 router.param('contactId', contactById);
 
-router.post('/subscription', async (req, res) => {
+router.post('/subscription/', async (req, res) => {
   var event = req.body;
   // Do something with event
   res.status(200).send(event);
