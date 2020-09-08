@@ -19,7 +19,7 @@ router.param('contactId', contactById);
 router.post('/my/webhook/subscription/', async (req, res) => {
   var event = req.body;
   // Do something with event
-  res.status(200).send(event);
+  res.status(200).send(req.body);
 });
 
 module.exports = router;
