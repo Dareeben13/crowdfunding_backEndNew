@@ -18,7 +18,13 @@ router.param('contactId', contactById);
 
 router.post('/my/webhook/subscription/', async (req, res) => {
   var event = req.body;
-  // Do something with event
+
+  if (event) {
+    console.log("I just received an event from paystack")
+  }else{
+    console.log("I did not received an event from paystack")
+  }
+ 
   res.status(200).send({event});
 });
 
