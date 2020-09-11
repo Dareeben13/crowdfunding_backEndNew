@@ -20,9 +20,9 @@ router.post('/my/webhook/subscription/', async (req, res) => {
   var event = req.body;
 
   if (event) {
-    console.log("I just received an event from paystack")
+    console.log("I just received an event from paystack", event.charge.success, charge.success)
   }else{
-    console.log("I did not received an event from paystack")
+    console.log("I did not received an event from paystack", event.charge.success, charge.success)
   }
  
   res.status(200).send({event});
