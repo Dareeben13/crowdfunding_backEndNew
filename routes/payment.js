@@ -1,7 +1,18 @@
 const express = require("express");
 const router = express.Router();
 
-const {create, paymentById, read, list, listRelated, refById, ref, update, listRelatedByProduct} = require("../controllers/payment");
+const {
+  create,
+  paymentById,
+  read,
+  list,
+  listRelated,
+  refById,
+  ref,
+  update,
+  listRelatedByProduct,
+  createProject,
+} = require('../controllers/payment');
 const { projectById } = require("../controllers/project");
 const { requireSignin, isAuth, isAdmin } = require("../controllers/auth");
 
@@ -9,7 +20,8 @@ const { userById } = require("../controllers/user");
 
  router.get("/payment/:paymentId", read);
 
-router.post("/payment/create/:userId", requireSignin, isAuth, create);
+router.post('/payment/project/create', createProject);
+router.post('/payment/create/:userId', requireSignin, isAuth, create);
 
 router.get("/payment/user/:userId", requireSignin, isAuth, listRelated);
 router.get("/payment/project/:projectId",  listRelatedByProduct);

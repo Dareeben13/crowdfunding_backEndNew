@@ -5,7 +5,6 @@ const paymentSchema = new mongoose.Schema({
     userId: {
         type: ObjectId,
         ref: 'User',
-        required: true,
       },
    
       projectId: {
@@ -22,7 +21,6 @@ const paymentSchema = new mongoose.Schema({
       referenceId: {
         type: String,
         trim: true,
-        required: true,
         maxlength: 32,
         unique: true
       },

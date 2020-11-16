@@ -22,7 +22,7 @@ exports.read = (req, res) => {
 exports.create = (req, res) => {
     let form = new formidable.IncomingForm();
     form.keepExtensions = true;
-    form.parse(req, (err, fields, files) => {
+    form.parse(req, (err, fields) => {
         if (err) {
             return res.status(400).json({error: "File could not be uploaded"});
         }
@@ -43,6 +43,20 @@ exports.create = (req, res) => {
         });
     });
 }
+
+
+exports.createProject = (req, res) => {
+    console.log(req.body);
+  const payment = new Payment(req.body);
+  payment.save((err, payment) => {
+    if (err) {
+      return res.status(400).json(err);
+    }
+    res.json({
+      payment,
+    });
+  });
+};
 
 
 // exports.update = (req, res) => {

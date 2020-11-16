@@ -5,7 +5,7 @@ const { errorHandler } = require("../helpers/dbErrorHandler");
 
 
 exports.signup = (req, res) => {
-  console.log("req.bod");
+  console.log("req.body");
   const user = new User(req.body);
   user.save((err, user) => {
     if (err) {
