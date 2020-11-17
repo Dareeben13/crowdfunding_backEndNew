@@ -17,7 +17,7 @@ exports.mail = (req, res) => {
 
     const emailData = {
         to: `${email2}`,
-        from: "marketreports@nasdng.com",
+        from: "marketoperations@nasdng.com",
         subject: "Your Verification needs attention",
         html: `
       <div style="background-color:#efeff0;font-family:'Montserrat',Arial,Helvetica,sans-serif;color:#072360;font-size:16px;line-height:1.6;padding-top:40px;padding-bottom:40px">
@@ -193,7 +193,7 @@ exports.passwordReset = (req, res) => {
 
     const emailData = {
         to: `${email2}`,
-        from: "marketreports@nasdng.com",
+        from: "marketoperations@nasdng.com",
         subject: "Your NASD account - Forgot your password?",
         html: `
         <div style="background-color:#efeff0;font-family:'Montserrat',Arial,Helvetica,sans-serif;color:#072360;font-size:16px;line-height:1.6;padding-top:40px;padding-bottom:40px">
@@ -370,7 +370,7 @@ exports.payment = (req, res) => {
 
     const emailData = {
         to: `${email2}`,
-        from: "marketreports@nasdng.com",
+        from: "marketoperations@nasdng.com",
         subject: `Payment of ${amount} from ${email2} [${refId}]`,
         html: `
       <div id=":2e7" class="ii gt"><div id=":2e8" class="a3s aXjCH "><u></u>
@@ -642,7 +642,7 @@ exports.applicationVerificationProcessingMail = (req, res) => {
 
     const emailData = {
         to: `${email2}`,
-        from: "marketreports@nasdng.com",
+        from: "marketoperations@nasdng.com",
         subject: `Your Verification has been received`,
         html: `
         <div class=""><div class="aHl"></div><div id=":1hj" tabindex="-1"></div><div id=":1gt" class="ii gt"><div id=":1gu" class="a3s aXjCH msg2135453032208332481"><u></u>
@@ -816,7 +816,7 @@ exports.applicationAccept = (req, res) => {
 
     const emailData = {
         to: `${email2}`,
-        from: "marketreports@nasdng.com",
+        from: "marketoperations@nasdng.com",
         subject: `Your Verification has been Approved!`,
         html: `
         <div class=""><div class="aHl"></div><div id=":1hj" tabindex="-1"></div><div id=":1gt" class="ii gt"><div id=":1gu" class="a3s aXjCH msg2135453032208332481"><u></u>
@@ -993,7 +993,7 @@ exports.applicationDecline = (req, res) => {
 
     const emailData = {
         to: `${email2}`,
-        from: "marketreports@nasdng.com",
+        from: "marketoperations@nasdng.com",
         subject: `Your Verification needs attention`,
         html: `
         <div class=""><div class="aHl"></div><div id=":1hj" tabindex="-1"></div><div id=":1gt" class="ii gt"><div id=":1gu" class="a3s aXjCH msg2135453032208332481"><u></u>
