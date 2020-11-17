@@ -1,52 +1,54 @@
-const formidable = require("formidable");
-const _ = require("lodash");
-const fs = require("fs");
-const Payment = require("../modles/payment");
-const {errorHandler} = require("../helpers/dbErrorHandler");
+const formidable = require('formidable');
+const _ = require('lodash');
+const fs = require('fs');
+const Payment = require('../modles/payment');
+const { errorHandler } = require('../helpers/dbErrorHandler');
+const { chunk, forEach } = require('lodash');
 
 exports.paymentById = (req, res, next, id) => {
-    Payment.findById(id).populate("projectId", '-image').populate("userId").exec((err, payment) => {
-        if (err || !payment) {
-            return res.status(400).json({error: " Project not found"});
-        }
-        req.payment = payment;
-        next();
+  Payment.findById(id)
+    .populate('projectId', '-image')
+    .populate('userId')
+    .exec((err, payment) => {
+      if (err || !payment) {
+        return res.status(400).json({ error: ' Project not found' });
+      }
+      req.payment = payment;
+      next();
     });
 };
 
 exports.read = (req, res) => {
-    req.payment.image = undefined;
-    return res.json(req.payment);
+  req.payment.image = undefined;
+  return res.json(req.payment);
 };
 
 exports.create = (req, res) => {
-    let form = new formidable.IncomingForm();
-    form.keepExtensions = true;
-    form.parse(req, (err, fields) => {
-        if (err) {
-            return res.status(400).json({error: "File could not be uploaded"});
-        }
-        // check for all fields
-        const {userId, projectId, amount} = fields;
+  let form = new formidable.IncomingForm();
+  form.keepExtensions = true;
+  form.parse(req, (err, fields) => {
+    if (err) {
+      return res.status(400).json({ error: 'File could not be uploaded' });
+    }
+    // check for all fields
+    const { userId, projectId, amount } = fields;
 
-        if (!userId || !projectId || !amount) {
-            return res.status(400).json({error: " All fields are required "});
-        }
+    if (!userId || !projectId || !amount) {
+      return res.status(400).json({ error: ' All fields are required ' });
+    }
 
-        let payment = new Payment(fields);
+    let payment = new Payment(fields);
 
-        payment.save((err, result) => {
-            if (err) {
-                return res.status(400).json(err);
-            }
-            res.json(result);
-        });
+    payment.save((err, result) => {
+      if (err) {
+        return res.status(400).json(err);
+      }
+      res.json(result);
     });
-}
-
+  });
+};
 
 exports.createProject = (req, res) => {
-    console.log(req.body);
   const payment = new Payment(req.body);
   payment.save((err, payment) => {
     if (err) {
@@ -58,6 +60,36 @@ exports.createProject = (req, res) => {
   });
 };
 
+// exports.createProject = (res, req) => {
+//   const axios = (require = require('axios'));
+
+//   axios
+//     .get(
+//       'http://jsonmock.hackerrank.com/api/football_matches?year=2011&page=2'
+//     )
+//       .then((result) => {
+//           var r = result.data['data'];
+
+//       console.log(r);
+
+//          var i;
+//           for (i = 0; i < r.length; i++) {
+        
+//               if (r[i]['team1goals'] - r[i]['team2goals'] === 0) {
+//                    console.log(
+//                      r[i]['team1'] +
+//                        ' vs ' +
+//                        r[i]['team2'] +
+//                        ' Scores ' +
+//                        r[i]['team1goals'] + ' : ' +  r[i]['team2goals']
+//                    );
+//               }
+     
+//     }
+//     }).catch(error => {
+//          console.log(error);
+//     })
+// };
 
 // exports.update = (req, res) => {
 // let form = new formidable.IncomingForm();
@@ -70,7 +102,6 @@ exports.createProject = (req, res) => {
 //     let payment = req.payment;
 //     payment = _.extend(payment, fields);
 
-
 //     payment.save((err, result) => {
 //       if (err) {
 //         return res.status(400).json({ error: errorHandler(err) });
@@ -80,74 +111,82 @@ exports.createProject = (req, res) => {
 // });
 // };
 
-
 exports.update = (req, res) => {
-    Payment.findOne({
-        _id: req.payment._id
-    }, (err, payment) => {
-        if (err || !payment) {
-            return res.status(400).json({error: 'Payment not found'});
+  Payment.findOne(
+    {
+      _id: req.payment._id,
+    },
+    (err, payment) => {
+      if (err || !payment) {
+        return res.status(400).json({ error: 'Payment not found' });
+      }
+      payment.status = 1;
+      payment.save((err, updatedPayment) => {
+        if (err) {
+          console.log('PAYMENT UPDATE ERROR', err);
+          return res.status(400).json({ error: 'Payment update failed' });
         }
-        payment.status = 1;
-        payment.save((err, updatedPayment) => {
-            if (err) {
-                console.log('PAYMENT UPDATE ERROR', err);
-                return res.status(400).json({error: 'Payment update failed'});
-            }
-            res.json(updatedPayment);
-        });
-    });
+        res.json(updatedPayment);
+      });
+    }
+  );
 };
-
 
 exports.list = (req, res) => {
-    let order = req.query.order ? req.query.order : "asc";
-    let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
-    let limit = req.query.limit ? parseInt(req.query.limit) : 100;
+  let order = req.query.order ? req.query.order : 'asc';
+  let sortBy = req.query.sortBy ? req.query.sortBy : '_id';
+  let limit = req.query.limit ? parseInt(req.query.limit) : 100;
 
-    Payment.find().sort([[sortBy, order]]).limit(limit).populate("projectId", '-image').populate("userId").exec((err, payment) => {
-        if (err) {
-            return res.status(400).json({error: "payment not found"});
-        }
-        res.json(payment);
+  Payment.find()
+    .sort([[sortBy, order]])
+    .limit(limit)
+    .populate('projectId', '-image')
+    .populate('userId')
+    .exec((err, payment) => {
+      if (err) {
+        return res.status(400).json({ error: 'payment not found' });
+      }
+      res.json(payment);
     });
 };
-
 
 exports.listRelated = (req, res) => {
-    Payment.find({userId: req.profile._id, status: 1}).populate("projectId", '-image').populate("userId").exec((err, payment) => {
-        if (err) {
-            return res.status(400).json({error: "payment not found"});
-        };
-        res.json(payment);
+  Payment.find({ userId: req.profile._id, status: 1 })
+    .populate('projectId', '-image')
+    .populate('userId')
+    .exec((err, payment) => {
+      if (err) {
+        return res.status(400).json({ error: 'payment not found' });
+      }
+      res.json(payment);
     });
-
 };
-
 
 exports.listRelatedByProduct = (req, res) => {
-    Payment.find({projectId: req.project._id, status: 1}).populate("projectId", '-image').populate("userId").exec((err, payment) => {
-        if (err) {
-            return res.status(400).json({error: "payment not found"});
-        };
-        res.json(payment);
+  Payment.find({ projectId: req.project._id, status: 1 })
+    .populate('projectId', '-image')
+    .populate('userId')
+    .exec((err, payment) => {
+      if (err) {
+        return res.status(400).json({ error: 'payment not found' });
+      }
+      res.json(payment);
     });
-
 };
-
-
 
 exports.refById = (req, res, next, id) => {
-    Payment.find({referenceId: id}).populate("projectId", '-image').populate("userId").exec((err, payment) => {
-        if (err || !payment) {
-            return res.status(400).json({error: " Project not found"});
-        }
-        req.ref = payment;
-        next();
+  Payment.find({ referenceId: id })
+    .populate('projectId', '-image')
+    .populate('userId')
+    .exec((err, payment) => {
+      if (err || !payment) {
+        return res.status(400).json({ error: ' Project not found' });
+      }
+      req.ref = payment;
+      next();
     });
 };
 
-
 exports.ref = (req, res) => {
-    return res.json(req.ref);
+  return res.json(req.ref);
 };
