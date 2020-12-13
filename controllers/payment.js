@@ -74,7 +74,7 @@ exports.createProject = (req, res) => {
 
 //          var i;
 //           for (i = 0; i < r.length; i++) {
-        
+
 //               if (r[i]['team1goals'] - r[i]['team2goals'] === 0) {
 //                    console.log(
 //                      r[i]['team1'] +
@@ -84,7 +84,7 @@ exports.createProject = (req, res) => {
 //                        r[i]['team1goals'] + ' : ' +  r[i]['team2goals']
 //                    );
 //               }
-     
+
 //     }
 //     }).catch(error => {
 //          console.log(error);
